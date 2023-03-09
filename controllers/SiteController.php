@@ -2,7 +2,10 @@
 
 namespace app\controllers;
 
+use app\models\Article;
+use app\models\Category;
 use Yii;
+use yii\data\Pagination;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -58,9 +61,58 @@ class SiteController extends Controller
      *
      * @return string
      */
+//    public function actionIndex()
+//    {
+//
+//        $query = Article::find();
+//
+//        $count = $query->count();
+//
+//        $pagination = new Pagination(['totalCount' => $count, 'pageSize'=>1]);
+//
+//        $articles = $query->offset($pagination->offset)
+//            ->limit($pagination->limit)
+//            ->all();
+//
+//        $popular = Article::find()->orderBy('viewed desc')->limit(3)->all();
+//
+//        $recent =Article::find()->orderBy('date asc')->limit(4)->all();
+//
+//        $categories = Category::find()->all();
+//
+//        return $this->render('index',[
+//            'articles' => $articles,
+//            'pagination' => $pagination,
+//            'popular' => $popular,
+//            'recent' => $recent,
+//            'categories' => $categories,
+//        ]);
+//
+//    }
     public function actionIndex()
     {
-        return $this->render('index');
+        $data = Article::getAll(3);
+        $popular = Article::getPopular();
+        $recent = Article::getRecent();
+        $categories = Category::getAll();
+
+        return $this->render('index',[
+            'articles'=>$data['articles'],
+            'pagination'=>$data['pagination'],
+            'popular'=>$popular,
+            'recent'=>$recent,
+            'categories'=>$categories
+        ]);
+    }
+
+    public function actionView()
+    {
+        return $this->render('single');
+    }
+
+    public function actionCategory()
+    {
+        return $this->render('category');
     }
 
     /**
