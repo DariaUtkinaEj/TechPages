@@ -7,7 +7,7 @@ page.viewportSize = {
 page.open('http://tech.loc/', function() {
 
     setTimeout(function() {
-        page.render('screen1.png');
+        page.render('screen11.png');
         phantom.exit();
     }, 200);
 });
