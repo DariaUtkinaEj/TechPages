@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Article;
 use app\models\Category;
+use app\models\CommentForm;
 use Yii;
 use yii\data\Pagination;
 use yii\filters\AccessControl;
@@ -61,34 +62,6 @@ class SiteController extends Controller
      *
      * @return string
      */
-//    public function actionIndex()
-//    {
-//
-//        $query = Article::find();
-//
-//        $count = $query->count();
-//
-//        $pagination = new Pagination(['totalCount' => $count, 'pageSize'=>1]);
-//
-//        $articles = $query->offset($pagination->offset)
-//            ->limit($pagination->limit)
-//            ->all();
-//
-//        $popular = Article::find()->orderBy('viewed desc')->limit(3)->all();
-//
-//        $recent =Article::find()->orderBy('date asc')->limit(4)->all();
-//
-//        $categories = Category::find()->all();
-//
-//        return $this->render('index',[
-//            'articles' => $articles,
-//            'pagination' => $pagination,
-//            'popular' => $popular,
-//            'recent' => $recent,
-//            'categories' => $categories,
-//        ]);
-//
-//    }
     public function actionIndex()
     {
         $data = Article::getAll(3);
@@ -105,10 +78,6 @@ class SiteController extends Controller
         ]);
     }
 
-//    public function actionView()
-//    {
-//        return $this->render('single');
-//    }
     public function actionView($id)
     {
         $article = Article::findOne($id);
@@ -116,7 +85,7 @@ class SiteController extends Controller
         $recent = Article::getRecent();
         $categories = Category::getAll();
         $comments = $article->getArticleComments();
-       // $commentForm = new CommentForm();
+        $commentForm = new CommentForm();
 
         $article->viewedCounter();
 
@@ -126,7 +95,7 @@ class SiteController extends Controller
             'recent'=>$recent,
             'categories'=>$categories,
             'comments'=>$comments,
-           // 'commentForm'=>$commentForm
+            'commentForm'=>$commentForm
         ]);
     }
 
@@ -147,63 +116,24 @@ class SiteController extends Controller
         ]);
     }
 
-    /**
-     * Login action.
-     *
-     * @return string
-     */
-//    public function actionLogin()
-//    {
-//        if (!Yii::$app->user->isGuest) {
-//            return $this->goHome();
-//        }
-//
-//        $model = new LoginForm();
-//        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-//            return $this->goBack();
-//        }
-//        return $this->render('login', [
-//            'model' => $model,
-//        ]);
-//    }
-
-//    /**
-//     * Logout action.
-//     *
-//     * @return string
-//     */
-//    public function actionLogout()
-//    {
-//        Yii::$app->user->logout();
-//
-//        return $this->goHome();
-//    }
-
-    /**
-     * Displays contact page.
-     *
-     * @return string
-     */
-    public function actionContact()
+    public function actionComment($id)
     {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
+        $model = new CommentForm();
 
-            return $this->refresh();
+        if(Yii::$app->request->isPost)
+        {
+            $model->load(Yii::$app->request->post());
+            if($model->saveComment($id))
+            {
+                Yii::$app->getSession()->setFlash('comment', 'Your comment will be added soon!');
+                return $this->redirect(['site/view','id'=>$id]);
+            }
         }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
     }
 
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
     public function actionAbout()
     {
         return $this->render('about');
     }
+
 }

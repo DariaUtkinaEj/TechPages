@@ -81,9 +81,8 @@ PublicAsset::register($this);
                 <div class="col-md-4">
                     <aside class="footer-widget">
                         <div class="about-img"><img src="/public/images/logo2.png" alt=""></div>
-                        <div class="about-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed voluptua. At vero eos et
-                            accusam et justo duo dlores et ea rebum magna text ar koto din.
+                        <div class="about-content"> I just want to share something wonderful I found on the Internet, help you to study and make the world a little kinder.
+
                         </div>
                         <div class="address">
                             <h4 class="text-uppercase">contact Info</h4>
