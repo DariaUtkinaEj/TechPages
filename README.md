@@ -7,6 +7,8 @@ I use:
 * PHP 7.2
 * Phantom.js - headless browser for test screens
 * Postman for testing
+* Extension [CKeditor](https://github.com/MihailDev/yii2-ckeditor) 
+* Extension [elfinder](https://github.com/MihailDev/yii2-elfinder)
 
 It look like this for now (Test articles, test pictures)
 
