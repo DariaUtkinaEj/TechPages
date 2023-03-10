@@ -12,6 +12,10 @@ It look like this for now (Test articles, test pictures)
 
 ![screen22.png](phantom.js%2Fscreen22.png)
 ![img.png](img.png)
+
+here's login page:
 ![img_1.png](img_1.png)
+
+text editor for articles:
 ![img_2.png](img_2.png)
 
