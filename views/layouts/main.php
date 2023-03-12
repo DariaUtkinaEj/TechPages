@@ -29,7 +29,6 @@ PublicAsset::register($this);
     <nav class="navbar main-menu navbar-default">
         <div class="container">
             <div class="menu-content">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                             data-target="#bs-example-navbar-collapse-1">
@@ -45,7 +44,6 @@ PublicAsset::register($this);
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul class="nav navbar-nav text-uppercase">
-<!--                        <li><a data-toggle="dropdown" class="dropdown-toggle" href="/">Home</a></li>-->
                         <li><a href="<?= Url::toRoute(['site/index'])?>">Home</a></li>
                     </ul>
                     <div class="i_con">
@@ -63,17 +61,12 @@ PublicAsset::register($this);
                             <?php endif;?>
                         </ul>
                     </div>
-
                 </div>
-                <!-- /.navbar-collapse -->
             </div>
         </div>
-        <!-- /.container-fluid -->
     </nav>
 
-
     <?= $content ?>
-
 
     <footer class="footer-widget-section">
         <div class="container">
@@ -98,81 +91,13 @@ PublicAsset::register($this);
 
                 <div class="col-md-4">
                     <aside class="footer-widget">
-                        <h3 class="widget-title text-uppercase">Testimonials</h3>
-
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                            <!--Indicator-->
-                            <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                    <div class="single-review">
-                                        <div class="review-text">
-                                            <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                                tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                                vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                                magna aliquyam eratma</p>
-                                        </div>
-                                        <div class="author-id">
-                                            <img src="/public/images/author.png" alt="">
-
-                                            <div class="author-text">
-                                                <h4>Sophia</h4>
-
-                                                <h4>CEO, ReadyTheme</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="single-review">
-                                        <div class="review-text">
-                                            <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                                tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                                vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                                magna aliquyam eratma</p>
-                                        </div>
-                                        <div class="author-id">
-                                            <img src="/public/images/author.png" alt="">
-
-                                            <div class="author-text">
-                                                <h4>Sophia</h4>
-
-                                                <h4>CEO, ReadyTheme</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="single-review">
-                                        <div class="review-text">
-                                            <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                                tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                                vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                                magna aliquyam eratma</p>
-                                        </div>
-                                        <div class="author-id">
-                                            <img src="/public/images/author.png" alt="">
-
-                                            <div class="author-text">
-                                                <h4>Sophia</h4>
-
-                                                <h4>CEO, ReadyTheme</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <h3 class="widget-title text-uppercase"></h3>
 
                     </aside>
                 </div>
                 <div class="col-md-4">
                     <aside class="footer-widget">
-                        <h3 class="widget-title text-uppercase">Custom Category Post</h3>
+                        <h3 class="widget-title text-uppercase">Thank you for watching!</h3>
 
 
                         <div class="custom-post">
@@ -180,8 +105,8 @@ PublicAsset::register($this);
                                 <a href="#"><img src="/public/images/footer-img.png" alt=""></a>
                             </div>
                             <div>
-                                <a href="#" class="text-uppercase">Home is peaceful Place</a>
-                                <span class="p-date">February 15, 2016</span>
+                                <a href="#" class="text-uppercase">Подпишитесь: https://github.com/DariaUtkinaEj</a>
+                                <span class="p-date"></span>
                             </div>
                         </div>
                     </aside>
