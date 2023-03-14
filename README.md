@@ -1,5 +1,8 @@
 IT Articles Blog:
 --------------------
+Важное обновление!
+Я развернула тестовую версию сайта на своем домене [ссылка](https://just-for-fun-myapps.ru/tech.pages.loc/web/)!
+---------------------
 I use:
 * Yii v 2.0.10
 * MySQL v 5.5
