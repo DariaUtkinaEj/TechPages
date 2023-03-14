@@ -3,10 +3,10 @@ page.viewportSize = {
     width: 1920,
     height: 1080
 };
-page.open('http://tech.loc/site/index?page=2&per-page=3', function() {
+page.open('https://just-for-fun-myapps.ru/tech.pages.loc/web/', function() {
 
     setTimeout(function() {
-        page.render('screen22.png');
+        page.render('screen23.png');
         phantom.exit();
     }, 200);
 });
