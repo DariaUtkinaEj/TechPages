@@ -13,10 +13,10 @@ I use:
 * Extension [CKeditor](https://github.com/MihailDev/yii2-ckeditor) 
 * Extension [elfinder](https://github.com/MihailDev/yii2-elfinder)
 
-It look like this for now (Test articles, test pictures)
+It looks like this for now (Test articles, test pictures)
 
-![screen22.png](phantom.js%2Fscreen22.png)
-![img.png](img.png)
+![img_3.png](img_3.png)
+
 
 here's login page:
 ![img_1.png](img_1.png)
