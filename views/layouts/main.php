@@ -5,11 +5,7 @@
 
 use app\assets\PublicAsset;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
 use yii\helpers\Url;
-use yii\widgets\Breadcrumbs;
-use app\assets\AppAsset;
 
 PublicAsset::register($this);
 ?>
@@ -68,48 +64,68 @@ PublicAsset::register($this);
 
     <?= $content ?>
 
-    <footer class="footer-widget-section">
+    <footer class="footer-widget-section" style="margin-bottom: -15px;">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <aside class="footer-widget">
-                        <div class="about-img"><img src="/public/images/logo2.png" alt=""></div>
-                        <div class="about-content"> I just want to share something wonderful I found on the Internet, help you to study and make the world a little kinder.
-
-                        </div>
-                        <div class="address">
-                            <h4 class="text-uppercase">contact Info</h4>
-
-                            <p> Ufa, Russia </p>
-
-                            <p> Phone: +7 996 105 76 32</p>
-
-                            <p> github: @DariaUtkinaEj </p>
-                        </div>
-                    </aside>
+                <div style="margin: 30px 0 -30px 0;">
+                    <h2 class="text-uppercase" style="color: #FFFFFF; text-align: center;">
+                        <?= Yii::t('app', 'Thank you for watching!'); ?>
+                    </h2>
                 </div>
-
+            </div>
+            <div class="row">
                 <div class="col-md-4">
-                    <aside class="footer-widget">
-                        <h3 class="widget-title text-uppercase"></h3>
-
-                    </aside>
+                    <div class="footer-widget">
+                        <div class="about-img"
+                             style="
+                               background-image: url('/public/images/logo2.png');
+                               background-position: center center;
+                               width: 320px;
+                               height: 227px;
+                             "
+                        ></div>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <aside class="footer-widget">
-                        <h3 class="widget-title text-uppercase">Thank you for watching!</h3>
-
-
-                        <div class="custom-post">
-                            <div>
-                                <a href="#"><img src="/public/images/footer-img.png" alt=""></a>
-                            </div>
-                            <div>
-                                <a href="#" class="text-uppercase">Подпишитесь: https://github.com/DariaUtkinaEj</a>
-                                <span class="p-date"></span>
-                            </div>
+                    <div class="footer-widget">
+                        <div class="about-content" style="padding-top: 0; font-size: 17px; text-align: center;">
+                            I just want to share something wonderful I found on the Internet, help you to study and make the world a little kinder.
                         </div>
-                    </aside>
+                        <div class="address" style="padding-top: 0; text-align: center;">
+                            <h4 class="text-uppercase" style="margin-top: 20px; margin-bottom: 15px; font-size: 20px; font-weight: 700;">
+                                contact Info
+                            </h4>
+                            <p style="font-size: 16px; margin-bottom: 13px;"> Ufa, Russia </p>
+                            <p style="font-size: 16px; margin-bottom: 13px;">
+                                Phone: <a href="tel:+7(996)105-76-32" target="_blank" style="color: #00bff3;">
+                                    +7 (996) 105-76-32
+                                </a>
+                            </p>
+                            <p style="font-size: 16px;">github:&nbsp;
+                                <a href="https://github.com/DariaUtkinaEj" target="_blank" style="color: #00bff3;">
+                                    @DariaUtkinaEj
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding-left: 55px;">
+                    <div class="footer-widget">
+                        <a href="#">
+                            <div class="about-img"
+                                 style="
+                                   background-image: url('/public/images/footer-img.png');
+                                   background-position: center center;
+                                   width: 299px;
+                                   height: 190px;
+                                   background-size: 105%;
+                                 "
+                            ></div>
+                        </a>
+                        <a href="https://github.com/DariaUtkinaEj" target="_blank" style="color: #00bff3; font-size: 22px;">
+                            Подпишись на мой гитхаб!
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -117,8 +133,10 @@ PublicAsset::register($this);
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="text-center">&copy; 2023 <a href="#">TechPages, </a> Built with <i
-                                class="fa fa-heart"></i> by <a href="#">Daria Utkina</a>
+                        <div class="text-center">&copy; <?= Date('Y'); ?>
+                            <a href="#">TechPages, </a> Built with
+                            <i class="fa fa-heart"></i> by
+                            <a href="#">Daria Utkina</a>
                         </div>
                     </div>
                 </div>
