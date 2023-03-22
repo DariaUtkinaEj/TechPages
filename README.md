@@ -18,9 +18,5 @@ It looks like this for now (Test articles, test pictures)
 ![img_5.png](img_5.png)
 
 
-here's login page:
-![img_1.png](img_1.png)
 
-text editor for articles:
-![img_2.png](img_2.png)
 
