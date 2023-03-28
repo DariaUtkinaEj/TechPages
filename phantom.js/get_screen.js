@@ -6,7 +6,7 @@ page.viewportSize = {
 page.open('https://just-for-fun-myapps.ru/tech.pages.loc/web/', function() {
 
     setTimeout(function() {
-        page.render('screen1111.png');
+        page.render('screen.png');
         phantom.exit();
     }, 200);
 });
