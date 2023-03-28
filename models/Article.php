@@ -176,7 +176,7 @@ class Article extends \yii\db\ActiveRecord
 
     public static function getRecent()
     {
-        return Article::find()->orderBy('date asc')->limit(4)->all();
+        return Article::find()->orderBy('date desc')->limit(4)->all();
     }
 
     public function getComments()
