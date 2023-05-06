@@ -78,14 +78,7 @@ PublicAsset::register($this);
             <div class="row">
                 <div class="col-md-4">
                     <div class="footer-widget">
-                        <div class="about-img"
-                             style="
-                               background-image: url('/public/images/logo2.png');
-                               background-position: center center;
-                               width: 320px;
-                               height: 227px;
-                             "
-                        ></div>
+                        <img src="/public/images/logo2.png">
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -93,40 +86,27 @@ PublicAsset::register($this);
                         <div class="about-content" style="padding-top: 0; font-size: 17px; text-align: center;">
                             I just want to share something wonderful I found on the Internet, help you to study and make the world a little kinder.
                         </div>
-                        <div class="address" style="padding-top: 0; text-align: center;">
-                            <h4 class="text-uppercase" style="margin-top: 20px; margin-bottom: 15px; font-size: 20px; font-weight: 700;">
-                                contact Info
-                            </h4>
-                            <p style="font-size: 16px; margin-bottom: 13px;"> Ufa, Russia </p>
-                            <p style="font-size: 16px; margin-bottom: 13px;">
-                                Phone: <a href="tel:+7(996)105-76-32" target="_blank" style="color: #00bff3;">
-                                    +7 (996) 105-76-32
-                                </a>
-                            </p>
-                            <p style="font-size: 16px;">github:&nbsp;
-                                <a href="https://github.com/DariaUtkinaEj" target="_blank" style="color: #00bff3;">
-                                    @DariaUtkinaEj
-                                </a>
-                            </p>
-                        </div>
+                
                     </div>
                 </div>
                 <div class="col-md-4" style="padding-left: 55px;">
                     <div class="footer-widget">
-                        <a href="#">
-                            <div class="about-img"
-                                 style="
-                                   background-image: url('/public/images/footer-img.png');
-                                   background-position: center center;
-                                   width: 299px;
-                                   height: 190px;
-                                   background-size: 105%;
-                                 "
-                            ></div>
-                        </a>
-                        <a href="https://github.com/DariaUtkinaEj" target="_blank" style="color: #00bff3; font-size: 22px;">
-                            Подпишись на мой гитхаб!
-                        </a>
+                        <div class="address" style="padding-top: 0; text-align: right;">
+                           
+                            <div style="padding-right: 15px;"> 
+                                <h4 class="text-uppercase" style="margin-top: 20px; margin-bottom: 15px; font-size: 20px; font-weight: 700;">
+                                    contact Info
+                                </h4>
+                                <p style="font-size: 16px; margin-bottom: 13px;"> Ufa, Russia </p>
+                                <p style="font-size: 16px; margin-bottom: 13px;">
+                                    Phone: <a href="tel:+7(996)105-76-32" target="_blank" style="color: #00bff3;">
+                                        +7 (996) 105-76-32
+                                    </a>
+                                </p>
+                            </div>
+                            <iframe src="https://ghbtns.com/github-btn.html?user=DariaUtkinaEj&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
