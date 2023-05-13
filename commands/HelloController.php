@@ -30,7 +30,7 @@ class HelloController extends Controller
 
         foreach ($articles as $article) {
             if ($article->image !== null) {
-                $article->image = '/uploads/' . $article->image;
+                $article->image = '/web' . $article->image;
 
                 $article->save();
             }
