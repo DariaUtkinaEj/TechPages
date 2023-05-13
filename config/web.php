@@ -62,6 +62,7 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'baseUrl' => 'https://just-for-fun-myapps.ru/tech.pages.loc',
             'rules' => [
             ],
         ],
