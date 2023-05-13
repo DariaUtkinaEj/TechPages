@@ -36,7 +36,7 @@ use yii\widgets\LinkPager;
                             <div class="social-share">
                                 <span class="social-share-title pull-left text-capitalize">By <?= $article->author->name; ?> On <?= $article->getDate();?></span>
                                 <ul class="text-center pull-right">
-                                    <li><a class="s-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?= Yii::$app->request->getAbsoluteUrl() ?>" target="_blank"><i class="fa fa-eye"></i></a></li><?= (int) $article->viewed?>
+                                    <li><a href="<?= Url::toRoute(['site/view', 'id'=>$article->id]);?>"><i class="fa fa-eye"></i></a></li><?= (int) $article->viewed?>
                                 </ul>
                             </div>
                         </div>
