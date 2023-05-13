@@ -7,6 +7,7 @@
 
 namespace app\commands;
 
+use app\models\Article;
 use yii\console\Controller;
 
 /**
@@ -25,6 +26,14 @@ class HelloController extends Controller
      */
     public function actionIndex($message = 'hello world')
     {
-        echo $message . "\n";
+        $articles = Article::find()->all();
+
+        foreach ($articles as $article) {
+            if ($article->image !== null) {
+                $article->image = '/uploads/' . $article->image;
+
+                $article->save();
+            }
+        }
     }
 }
