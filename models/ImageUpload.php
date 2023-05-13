@@ -38,7 +38,7 @@ class ImageUpload extends Model{
 
     private function generateFilename()
     {
-        return strtolower(md5(uniqid($this->image->baseName)) . '.' . $this->image->extension);
+        return '/uploads/' . strtolower(md5(uniqid($this->image->baseName)) . '.' . $this->image->extension);
     }
 
     public function deleteCurrentImage($currentImage)
