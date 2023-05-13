@@ -11,7 +11,7 @@ use yii\widgets\LinkPager;
 
                     <article class="post">
                         <div class="post-thumb">
-                            <a href="<?= Url::toRoute(['site/view', 'id'=>$article->id]);?>"><img src="<?= Yii::$app->urlManager->getBaseUrl() . $article->getImage();?>" alt=""></a>
+                            <a href="<?= Url::toRoute(['site/view', 'id'=>$article->id]);?>"><img src="<?= Yii::$app->params['webroot'] . $article->getImage();?>" alt=""></a>
 
                             <a href="<?= Url::toRoute(['site/view', 'id'=>$article->id]);?>" class="post-thumb-overlay text-center">
                                 <div class="text-uppercase text-center">View Post</div>

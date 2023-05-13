@@ -79,7 +79,7 @@ PublicAsset::register($this);
             <div class="row">
                 <div class="col-md-4">
                     <div class="footer-widget">
-                        <img src="<?= Yii::getAlias('@webroot') ?>/public/images/logo2.png">
+                        <img src="<?= Yii::$app->params['webroot'] ?>/public/images/logo2.png">
                     </div>
                 </div>
                 <div class="col-md-4">

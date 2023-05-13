@@ -1,6 +1,6 @@
 <?php
 
-$params = require(__DIR__ . '/params.php');
+$params = array_merge(require(__DIR__ . '/params.php'), require(__DIR__ . '/params-local.php'));
 
 $config = [
     'id' => 'basic',
@@ -62,7 +62,6 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'baseUrl' => 'https://just-for-fun-myapps.ru/tech.pages.loc',
             'rules' => [
             ],
         ],

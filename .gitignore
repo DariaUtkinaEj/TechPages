@@ -34,3 +34,4 @@ web/ckeditor
 web/ckfinder
 
 config/db.php
+config/params-local.php
