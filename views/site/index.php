@@ -60,7 +60,7 @@ use yii\widgets\LinkPager;
 
                         <?php foreach ($popular as $article):?>
                         <div class="popular-post">
-                            <a href="<?= Url::toRoute(['site/view','id'=>$article->id])?>" class="popular-img"><img src="<?= $article->getImage();?>" alt="">
+                            <a href="<?= Url::toRoute(['site/view','id'=>$article->id])?>" class="popular-img"><img src="<?=  Yii::$app->params['webroot'] . $article->getImage();?>" alt="">
 
                                     <div class="p-overlay"></div>
                             </a>
@@ -79,7 +79,7 @@ use yii\widgets\LinkPager;
                             <div class="thumb-latest-posts">
                                 <div class="media">
                                     <div class="media-left">
-                                        <a href="<?= Url::toRoute(['site/view','id'=>$article->id])?>" class="popular-img"><img src="<?= $article->getImage();?>" alt="">
+                                        <a href="<?= Url::toRoute(['site/view','id'=>$article->id])?>" class="popular-img"><img src="<?=  Yii::$app->params['webroot'] . $article->getImage();?>" alt="">
                                             <div class="p-overlay"></div>
                                         </a>
                                     </div>
