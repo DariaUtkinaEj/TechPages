@@ -64,8 +64,8 @@ AppAsset::register($this);
     </footer>
 
     <?php $this->endBody() ?>
-    <?php $this->registerJsFile('/ckeditor/ckeditor.js');?>
-    <?php $this->registerJsFile('/ckfinder/ckfinder.js');?>
+    <?php $this->registerJsFile(Yii::$app->params['webroot'] . '/ckeditor/ckeditor.js');?>
+    <?php $this->registerJsFile(Yii::$app->params['webroot'] . '/ckfinder/ckfinder.js');?>
     <script>
         $(document).ready(function(){
             var editor = CKEDITOR.replaceAll();
