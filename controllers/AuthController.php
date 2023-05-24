@@ -47,6 +47,8 @@ class AuthController extends Controller
             $model->load(Yii::$app->request->post());
             if($model->signup())
             {
+               // Yii::$app->mailer->compose('signup')->setFrom('techpages@email.ru');
+
                 return $this->redirect(['auth/login']);
             }
         }
