@@ -25,24 +25,9 @@ PublicAsset::register($this);
     <nav class="navbar main-menu navbar-default">
         <div class="container">
             <div class="menu-content">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+                <div class="navbar-header" style="width: -webkit-fill-available;">
                     <!--  <a class="navbar-brand" href="<?= Url::toRoute(['site/index'])?>"><img src="/tech.pages.loc/web/public/images/logo.png" alt=""></a> -->
                     <a class="navbar-brand" style="font-family: Arial,Helvetica Neue,Helvetica,sans-serif;" href="<?= Url::toRoute(['site/index'])?>">Tech Pages</a>
-                </div>
-
-
-                <div class="collapse navbar-collapse" style="min-height: 66px;" id="bs-example-navbar-collapse-1">
-
-                    <ul class="nav navbar-nav text-uppercase">
-                        <!--                        <li><a href="--><?php //= Url::toRoute(['site/index'])?><!--">Home</a></li>-->
-                    </ul>
                     <div class="i_con">
                         <ul class="nav navbar-nav text-uppercase">
                             <?php if(Yii::$app->user->isGuest):?>

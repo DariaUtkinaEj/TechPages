@@ -55,7 +55,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     charset="windows-1251"
             ></script>
             <script type="text/javascript">
-                VK.init({ apiId:  51596332 });
+                VK.init({ apiId:  51596332
+                });
             </script>
 
             <!-- Put this script tag to the place, where the Login block will be -->

@@ -113,10 +113,14 @@ header
 
 }
 
+.navbar-nav {
+    margin: 0!important;
+}
+
 .i_con {
     float: right;
     position: relative;
-    padding-right: 35px;
+    padding-right: 15px;
 }
 
 .i_con a i {
