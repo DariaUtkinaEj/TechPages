@@ -11,7 +11,7 @@ use yii\web\IdentityInterface;
  * @property integer $id
  * @property string $name
  * @property string $email
- * @property string $password
+ * @property string $password_hash
  * @property integer $isAdmin
  * @property string $photo
  *
@@ -34,7 +34,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     {
         return [
             [['isAdmin'], 'integer'],
-            [['name', 'email', 'password', 'photo'], 'string', 'max' => 255],
+            [['name', 'email', 'password_hash', 'photo'], 'string', 'max' => 255],
         ];
     }
 
@@ -47,7 +47,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
             'id' => 'ID',
             'name' => 'Name',
             'email' => 'Email',
-            'password' => 'Password',
+            'password_hash' => 'Password',
             'isAdmin' => 'Is Admin',
             'photo' => 'Photo',
         ];
@@ -92,8 +92,14 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
 
     public function validatePassword($password)
     {
-        return ($this->password == $password) ? true : false;
+        return \Yii::$app->security->validatePassword($password, $this->password_hash);
     }
+
+    public function setPassword($password)
+    {
+        $this->password_hash = \Yii::$app->security->generatePasswordHash($password);
+    }
+
 
     public function create()
     {
